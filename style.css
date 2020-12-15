@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Chilanka&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  font-size: 16px;
+  --charcoal: #383838;
+  --light-gray: #909090;
+  --white: #fff;
+  --green: #5cb835;
+  --blue: #5f8efd;
+  --orange: #fdbf5f;
+  --red: #fd5f5f;
+  --gold: #d1b203;
+  --animation-time: 0.2s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Roboto", sans-serif;
+  background-image: url("img/markus-spiske-cvBBO4PzWPg-unsplash.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body::before {
+  content: "";
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+body * {
+  z-index: 1;
+}
+
+.container {
+  height: 100%;
+  height: 100vh;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header {
+  height: 20%;
+  /* min-height: 115.594px; */
+  min-height: 20%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(220, 220, 200);
+  background-color: var(--charcoal);
+  z-index: 2;
+}
+
+#logo-container {
+  height: 100%;
+  width: 25%;
+  background-color: var(--light-gray);
+  padding: 10px;
+}
+
+#logo {
+  height: 100%;
+  width: 100%;
+  background-image: url("img/EJS2.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+#info {
+  color: var(--white);
+  /* font-family: "Chilanka", cursive; */
+  text-align: center;
+  width: 75%;
+  font-style: italic;
+}
+
+#info h1 {
+  font-size: 2rem;
+}
+
+#info h2 {
+  font-size: 1rem;
+}
+
+#info small {
+  font-size: 0.6rem;
+}
+
+.navbar {
+  height: 30px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  z-index: 2;
+}
+
+.card-btn {
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about-btn {
+  background-color: var(--green);
+}
+
+#web-dev-btn {
+  background-color: var(--blue);
+}
+
+#eng-btn {
+  background-color: var(--orange);
+}
+
+#contact-btn {
+  background-color: var(--red);
+}
+
+.main {
+  flex-grow: 1;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 2px;
+  padding-top: 5px;
+  padding-bottom: 0;
+}
+
+.card h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.card p {
+  font-size: 1.2rem;
+  text-align: justify;
+  margin: 10px auto;
+  width: 75%;
+}
+
+.card hr {
+  border: none;
+  border-bottom: 6px dotted black;
+  width: 50px;
+  margin: 10px auto;
+}
+
+.card img {
+  width: 150px;
+  border-radius: 20px;
+  margin: 20px 0;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.card-head {
+  height: 10%;
+  width: 100%;
+  padding: 10px;
+}
+
+.card-body {
+  height: 90%;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  text-align: center;
+  padding: 10px;
+  padding-bottom: 50px;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.card-body::-webkit-scrollbar {
+  display: none;
+}
+
+#about {
+  background-color: var(--green);
+  animation: enter var(--animation-time);
+}
+
+#about h2 {
+  color: var(--white);
+  background-color: var(--green);
+}
+
+#about hr {
+  border-color: var(--green);
+}
+
+#web-dev {
+  background-color: var(--blue);
+  animation: enter var(--animation-time);
+  display: none;
+}
+
+#web-dev h2 {
+  color: var(--white);
+}
+
+#web-dev hr {
+  border-color: var(--blue);
+}
+
+#web-dev a {
+  color: var(--blue);
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.skills {
+  font-size: 1.5rem;
+  width: auto;
+  margin: 20px auto;
+  text-align: start;
+}
+
+.skills td {
+  padding: 0 10px;
+}
+
+.stars {
+  color: var(--gold);
+}
+
+#eng {
+  background-color: var(--orange);
+  animation: enter var(--animation-time);
+  display: none;
+}
+
+#eng h2 {
+  color: var(--white);
+}
+
+#eng hr {
+  border-color: var(--orange);
+}
+
+#eng a {
+  color: var(--orange);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#contact {
+  background-color: var(--red);
+  animation: enter var(--animation-time);
+  display: none;
+}
+
+#contact h2 {
+  color: var(--white);
+}
+
+#contact p {
+  font-size: 1.5rem;
+  /* font-family: "Chilanka", cursive; */
+  text-align: center;
+  margin-top: 100px;
+}
+
+#contact a {
+  color: var(--red);
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: none;
+}
+
+#animation {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--charcoal);
+  color: var(--white);
+  z-index: 3;
+  display: none;
+}
+
+#animation h1 {
+  margin: 50px 0;
+  font-size: 6rem;
+}
+
+@keyframes enter {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 75%;
+  }
+}
+
+@media (max-width: 750px) {
+  .container {
+    width: 100%;
+  }
+  #info h1 {
+    font-size: 1.5rem;
+  }
+
+  #info h2 {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    height: 15%;
+  }
+  #info h1 {
+    font-size: 1rem;
+  }
+
+  #info h2 {
+    font-size: 0.5rem;
+  }
+}
