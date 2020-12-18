@@ -222,7 +222,6 @@ body * {
 
 #web-dev a {
   color: var(--blue);
-  font-size: 2rem;
   font-weight: bold;
   text-decoration: none;
 }
@@ -231,14 +230,15 @@ body * {
   font-size: 1.5rem;
   width: auto;
   margin: 20px auto;
-  text-align: start;
+  text-align: center;
 }
 
 .skills td {
   padding: 0 10px;
 }
 
-.stars {
+.fab {
+  font-size: 2rem;
   color: var(--gold);
 }
 
