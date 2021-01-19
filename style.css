@@ -231,15 +231,32 @@ body::before {
 }
 
 .skills {
-  font-size: 1.5rem;
-  width: auto;
-  margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 20px;
-  text-align: center;
+}
+
+.skills table {
+  font-size: 1.5rem;
 }
 
 .skills td {
   padding: 0 10px;
+}
+
+.skills td:nth-child(even) {
+  text-align: start;
+}
+
+.skills td:nth-child(odd) {
+  text-align: end;
 }
 
 .skills .fab {

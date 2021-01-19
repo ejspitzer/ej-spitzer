@@ -225,14 +225,23 @@ body {
 }
 
 .skills {
-  font-size: 1.5rem;
-  width: auto;
-  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
-  text-align: center;
+
+  table {
+    font-size: 1.5rem;
+  }
 
   td {
     padding: 0 10px;
+    &:nth-child(even) {
+      text-align: start;
+    }
+    &:nth-child(odd) {
+      text-align: end;
+    }
   }
 
   .fab {
