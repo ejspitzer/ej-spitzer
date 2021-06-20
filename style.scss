@@ -301,6 +301,16 @@ body {
   }
 }
 
+#pomodoro-clock {
+  @include background("img/pomodoro-clock-screenshot.PNG", cover);
+  width: 100%;
+  height: 150px;
+
+  &:hover .project {
+    display: block;
+  }
+}
+
 .project {
   width: 100%;
   height: 150px;

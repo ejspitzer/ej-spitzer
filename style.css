@@ -327,6 +327,19 @@ body::before {
   display: block;
 }
 
+#pomodoro-clock {
+  background-image: url("img/pomodoro-clock-screenshot.PNG");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 150px;
+}
+
+#pomodoro-clock:hover .project {
+  display: block;
+}
+
 .project {
   width: 100%;
   height: 150px;
